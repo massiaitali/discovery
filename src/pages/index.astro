@@ -1,0 +1,19 @@
+---
+import Layout from './../layouts/Layout.astro';
+import Card from './../components/Card/Card.astro';
+---
+
+<Layout>
+	<main class="flex flex-col">
+		<h1 class="text-3xl font-bold mx-auto text-primary-700 mb-6">Discovery</h1>
+		<div class="container mx-auto">
+			<div class="grid gap-4 grid-cols-1 md:grid-cols-4">
+				<Card
+					href="/twitter"
+					title="Top Tweets"
+					body="In this section you can discover all top tweets of the moment"
+				/>
+			</div>
+		</div>
+	</main>
+</Layout>
