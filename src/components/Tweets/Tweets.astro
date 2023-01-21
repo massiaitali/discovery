@@ -1,21 +1,14 @@
 ---
-import Card from './../Card/Card.astro';
+import { getTweets } from './../../helpers/twitter.js'
 
-import { ENV_VARS } from './../../../private/index.js';
+import Card from './../Card/Card.astro';
 
 import type { Tweet } from './tweets.type'
 
-const token = ENV_VARS.BEARER_TWITTER_TOKEN;
 let tweets : Tweet[] = [];
 
 try {
-    const response = await fetch('https://api.twitter.com/2/tweets?ids=1278747501642657792,1255542774432063488', {
-        method: 'GET',
-        headers: {'authorization': `Bearer ${token}`}
-    });
-    
-    const json : Record<string, Tweet[]> = await response.json();
-    tweets = json.data || [];
+    tweets = await getTweets(['1278747501642657792','1255542774432063488']);
 } catch {}
 ---
 

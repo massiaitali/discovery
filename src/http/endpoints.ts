@@ -1,0 +1,1 @@
+export const tweetsByIds = (tweets: String[] = []) =>  `https://api.twitter.com/2/tweets?ids=${tweets.join(',')}`;
