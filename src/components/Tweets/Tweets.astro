@@ -14,12 +14,15 @@ try {
 
 <div class="grid gap-4 grid-cols-1 md:grid-cols-4">
     {
-        tweets.map(({text, id}) => 
+        tweets.length > 0 ? tweets.map(({text, id}) => 
             <Card
                 href={`https://twitter.com/realmarcel1/status/${id}`}
                 title="From TwitterDev"
                 body={text}
             />
+        ) : 
+        (
+            <h2>No Results ids are not updated or token is expired</h2>
         )
     }
 </div>
