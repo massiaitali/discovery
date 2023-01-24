@@ -1,0 +1,18 @@
+---
+import { navConfig } from './navConfig';
+---
+
+<div class="flex flex-wrap gap-4">
+    {
+        navConfig.map(({label, link}) => 
+            (
+                <a
+                    class="hover:text-primary-400"
+                    href={link}
+                >
+                    {label}
+                </a>
+            )
+        )
+    }
+</div>
