@@ -9,4 +9,8 @@ export const navConfig: Nav[] = [
         label: 'Twitter Api',
         link: '/twitter',
     },
+    {
+        label: 'Discovery Api',
+        link: '/discovery-api',
+    },
 ];
