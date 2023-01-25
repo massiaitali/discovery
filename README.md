@@ -1,3 +1,3 @@
-# Discovery
+# Discovery App
 
 Todo
