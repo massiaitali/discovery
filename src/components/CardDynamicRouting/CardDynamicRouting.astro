@@ -1,0 +1,27 @@
+---
+import Card from "./../Card/Card.astro";
+---
+
+<Card
+    title="User router parameter with astro (no hydration)"
+    body="Put something in the search"
+>
+    <div 
+        class="flex flex-col gap-2"
+    >
+        <input id="inputDynamicParameter" />
+
+        <button id="submitDynamicParameter">Submit</button>
+    </div>
+</Card>
+
+
+<script>
+	const submitDynamicParameter = document.querySelector('#submitDynamicParameter');
+
+	submitDynamicParameter?.addEventListener('click', () => {
+		const inputDynamicParameter: HTMLInputElement | null = document.querySelector('#inputDynamicParameter');
+		const inputDynamicParameterValue = inputDynamicParameter?.value;
+		window.location.assign(`/dynamic-routing/${inputDynamicParameterValue}`)
+	});
+</script>

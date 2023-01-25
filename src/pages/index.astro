@@ -1,11 +1,11 @@
 ---
-import Default from '../layouts/Default.astro';
-import Card from '../components/Card/Card.astro';
-import CardDynamicRouting from '../components/CardDynamicRouting/CardDynamicRouting.astro';
-import CardDynamicRoutingVue from '../components/CardDynamicRoutingVue/CardDynamicRoutingVue.vue';
+import Layout from './../layouts/Layout.astro';
+import Card from './../components/Card/Card.astro';
+import CardDynamicRouting from './../components/CardDynamicRouting/CardDynamicRouting.astro';
+import CardDynamicRoutingVue from './../components/CardDynamicRoutingVue/CardDynamicRoutingVue.vue';
 ---
 
-<Default>
+<Layout>
 	<main class="flex flex-col">
 		<h1 class="text-3xl font-bold mx-auto text-primary-700 mb-6">HomePage</h1>
 		<div class="container mx-auto">
@@ -15,9 +15,14 @@ import CardDynamicRoutingVue from '../components/CardDynamicRoutingVue/CardDynam
 					title="Twitter Api"
 					body="Get tweets from twitter api"
 				/>
+				<Card
+					href="/discoveryapi"
+					title="Discovery Api"
+					body="An api build with flask"
+				/>
 				<CardDynamicRouting />
 				<CardDynamicRoutingVue client:load/>
 			</div>
 		</div>
 	</main>
-</Default>
+</Layout>

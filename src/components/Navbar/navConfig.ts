@@ -11,6 +11,6 @@ export const navConfig: Nav[] = [
     },
     {
         label: 'Discovery Api',
-        link: '/discovery-api',
+        link: '/discoveryapi',
     },
 ];

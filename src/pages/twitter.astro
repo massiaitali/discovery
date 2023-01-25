@@ -1,13 +1,13 @@
 ---
-import Default from '../layouts/Default.astro';
-import Tweets from '../components/Tweets/Tweets.astro';
+import Layout from './../layouts/Layout.astro';
+import Tweets from './../components/Tweets/Tweets.astro';
 ---
 
-<Default>
+<Layout>
 	<main class="flex flex-col">
 		<h1 class="text-3xl font-bold mx-auto text-primary-700 mb-6">Twitter Api</h1>
 		<div class="container mx-auto">
 			<Tweets/>
 		</div>
 	</main>
-</Default>
+</Layout>

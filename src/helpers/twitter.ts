@@ -1,7 +1,7 @@
-import { tweetsByIds } from '../http/endpoints.js'
-import { ENV_VARS } from '../../private/index.js';
+import { tweetsByIds } from './../http/endpoints.js'
+import { ENV_VARS } from './.././../private/index.js';
 
-import type { Tweet } from '../components/Tweets/tweets.type'
+import type { Tweet } from './../components/Tweets/tweets.type'
 
 const token = ENV_VARS.BEARER_TWITTER_TOKEN;
 
